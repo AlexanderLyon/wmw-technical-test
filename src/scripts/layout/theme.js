@@ -18,6 +18,16 @@ if (cookiesEnabled()) {
 
 const carousel = document.querySelector('.product-carousel');
 const flkty = new Flickity(carousel, {
-  cellAlign: 'left',
+  cellAlign: 'center',
+  groupCells: 3,
+  wrapAround: true,
   contain: true
 });
+
+// Add to cart functionality
+document.addEventListener('click', (event) => {
+	if (event.target.matches('.add-to-cart-btn')) {
+		event.preventDefault();
+    alert("Added to cart!");
+  }
+}, false);

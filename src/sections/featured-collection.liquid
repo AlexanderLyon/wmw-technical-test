@@ -22,7 +22,13 @@
           {% if product.featured_image != blank %}
             {{ product.featured_image | img_url: 'large' | img_tag }}
           {% endif %}
-          
+
+          {% for tag in product.tags %}
+            {% if tag contains 'badge' %}
+              <div class="sale-badge">Sale</div>
+            {% endif %}
+          {% endfor %}
+
           <span class="add-to-cart-btn" js-ajax-cart="addToCart" data-variant-id="{{ current_variant.id }}" data-quantity="1">Add to cart</span>
         </div>
 
@@ -36,6 +42,8 @@
       </a>
     {% endfor %}
   </div>
+
+  <a href="#" id="collection-cta">View Collection</a>
 </section>
 
 {% schema %}

@@ -4,66 +4,117 @@
  * Base styling for the featured collection product grid.
  *
  */
-.featured-collection {
-  text-align: center;
 
-  #title {
-    color: $primary-blue;
-    font-size: 40px;
+ body {
+  font-family: "Helvetica Neue", sans-serif;
+
+  h2 { font-family: inherit; }
+
+  header {
+    .site-header__cart { color: $primary-blue; }
   }
 
-  #subtitle {
-    margin: 0 auto;
-    color: $light-grey;
-    font-size: 18px;
-    line-height: 26px;
-    max-width: 611px;
-  }
+  .featured-collection {
+    text-align: center;
+    padding-bottom: 60px;
 
-  .product-carousel {
-    margin-top: 35px;
+    #title {
+      color: $primary-blue;
+      font-size: 40px;
+    }
 
-    a.product-card {
-      text-decoration: none;
-      text-align: left;
-      max-width: 306px;
-  
-      .image-container {
-        position: relative;
-  
-        .add-to-cart-btn {
-          display: none;
-          position: absolute;
-          bottom: 20px;
-          margin-left: 5%;
-          text-align: center;
-          font-size: 1.1em;
-          font-weight: bold;
-          height: 47px;
-          line-height: 47px;
-          width: 90%;
-          color: $primary-blue;
-          background-color: #FFF;
-          transition: 300ms;
-  
-          &:hover {
-            background-color: rgb(241, 248, 253);
+    #subtitle {
+      margin: 0 auto;
+      color: $light-grey;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 26px;
+      width: 90%;
+      max-width: 611px;
+    }
+
+    .product-carousel {
+      margin: 40px 0px 70px 0px;
+
+      a.product-card {
+        margin: 0px 10px;
+        padding: 0px;
+        text-decoration: none;
+        text-align: left;
+        width: 306px;
+        max-width: 100%;
+    
+        .image-container {
+          position: relative;
+
+          .sale-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: $primary-blue;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 15px;
           }
+    
+          .add-to-cart-btn {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            margin-left: 5%;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            height: 47px;
+            line-height: 47px;
+            width: 90%;
+            color: $primary-blue;
+            background-color: #FFF;
+            transition: 300ms;
+    
+            &:hover {
+              background-color: rgb(241, 248, 253);
+            }
+          }
+    
+          &:hover .add-to-cart-btn { display: block; }
         }
-  
-        &:hover .add-to-cart-btn { display: block; }
+    
+        .product-title {
+          margin: 10px 0px;
+          color: $primary-blue;
+          font-size: 21px;
+          font-weight: bold;
+        }
+    
+        .product-price {
+          color: $light-grey;
+          font-size: 18px;
+        }
       }
-  
-      .product-title {
-        color: $primary-blue;
-        font-size: 2em;
-        font-weight: bold;
-      }
-  
-      .product-price {
-        color: $light-grey;
+
+      .flickity-page-dots {
+        .dot {
+          height: 7px;
+          width: 7px;
+
+          &.is-selected { background-color: $primary-blue; }
+        }
       }
     }
+
+    #collection-cta {
+      display: inline-block;
+      height: 55px;
+      line-height: 55px;
+      padding: 0px 18px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: #FFF;
+      background-color: $primary-blue;
+    }
+    
   }
-  
-}
+ }
