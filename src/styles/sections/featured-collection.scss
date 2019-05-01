@@ -7,6 +7,63 @@
 .featured-collection {
   text-align: center;
 
-  h2 { color: $blue-heading; }
-  p { color: #9B9B9B; }
+  #title {
+    color: $primary-blue;
+    font-size: 40px;
+  }
+
+  #subtitle {
+    margin: 0 auto;
+    color: $light-grey;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 611px;
+  }
+
+  .product-carousel {
+    margin-top: 35px;
+
+    a.product-card {
+      text-decoration: none;
+      text-align: left;
+      max-width: 306px;
+  
+      .image-container {
+        position: relative;
+  
+        .add-to-cart-btn {
+          display: none;
+          position: absolute;
+          bottom: 20px;
+          margin-left: 5%;
+          text-align: center;
+          font-size: 1.1em;
+          font-weight: bold;
+          height: 47px;
+          line-height: 47px;
+          width: 90%;
+          color: $primary-blue;
+          background-color: #FFF;
+          transition: 300ms;
+  
+          &:hover {
+            background-color: rgb(241, 248, 253);
+          }
+        }
+  
+        &:hover .add-to-cart-btn { display: block; }
+      }
+  
+      .product-title {
+        color: $primary-blue;
+        font-size: 2em;
+        font-weight: bold;
+      }
+  
+      .product-price {
+        color: $light-grey;
+      }
+    }
+  }
+  
 }

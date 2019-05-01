@@ -15,3 +15,9 @@ if (cookiesEnabled()) {
     'supports-cookies',
   );
 }
+
+const carousel = document.querySelector('.product-carousel');
+const flkty = new Flickity(carousel, {
+  cellAlign: 'left',
+  contain: true
+});
